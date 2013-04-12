@@ -14,11 +14,11 @@ describe 'Annotator.Plugin.Markdown', ->
 
       spyOn(plugin, 'updateTextField')
       plugin.publish('annotationViewerTextField', [field, annotation])
-      expect(plugin.updateTextField).toHaveBeenCalledWith(field, annotation)
+      assert.isTrue(plugin.updateTextField.calledWith(field, annotation))
 
   describe "constructor", ->
     it "should create a new instance of Showdown", ->
-      expect(plugin.converter).toBeTruthy()
+      assert.isTrue(plugin.converter)
 
     it "should log an error if Showdown is not loaded", ->
       spyOn(console, 'error')
@@ -27,8 +27,8 @@ describe 'Annotator.Plugin.Markdown', ->
       Showdown.converter = null
 
       plugin = new Annotator.Plugin.Markdown($('<div />')[0])
-      expect(console.error).toHaveBeenCalled()
-      
+      assert(console.error.calledOnce)
+
       Showdown.converter = converter
 
   describe "updateTextField", ->
@@ -40,18 +40,18 @@ describe 'Annotator.Plugin.Markdown', ->
       annotation = {text: input}
       spyOn(plugin, 'convert').andReturn(output)
       spyOn(Annotator.$, 'escape').andReturn(input)
-      
+
       plugin.updateTextField(field, annotation)
 
     it 'should process the annotation text as Markdown', ->
-      expect(plugin.convert).toHaveBeenCalledWith(input)
+      assert.isTrue(plugin.convert.calledWith(input))
 
     it 'should update the content in the field', ->
-      expect($(field).html()).toBe(output)
+      assert.equal($(field).html(), output)
 
     it "should escape any existing HTML to prevent XSS", ->
-      expect(Annotator.$.escape).toHaveBeenCalledWith(input)
+      assert.isTrue(Annotator.$.escape.calledWith(input))
 
   describe "convert", ->
     it "should convert the provided text into markdown", ->
-      expect(plugin.convert(input)).toBe(output)
+      assert.equal(plugin.convert(input), output)
