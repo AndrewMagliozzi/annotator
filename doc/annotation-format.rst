@@ -1,3 +1,4 @@
+.. _annotation format:
 Annotation format
 =================
 
@@ -35,10 +36,10 @@ document:
         }
 
 Note that this annotation includes some info stored by plugins (notably
-the [[Permissions Plugin]] and [[Tags Plugin]]).
+the :ref:'permissions' and :ref:'tags').
 
 This basic schema is **completely extensible**. It can be added to by
 plugins, and any fields added by the frontend should be preserved by
-backend implementations. For example, the [[Store Plugin]] (which adds
+backend implementations. For example, the :ref:'store' (which adds
 persistence of annotations) allow you to specify arbitrary additional
 fields using the ``annotationData`` attribute.

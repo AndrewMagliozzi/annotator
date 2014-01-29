@@ -1,3 +1,4 @@
+.. _filter:
 ``Filter`` plugin
 =================
 

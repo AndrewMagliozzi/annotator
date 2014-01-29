@@ -108,10 +108,10 @@ it just add a call to ``.annotator("setupPlugins")``.
 
 This will set up the following:
 
-1. The [[Tags\|Tags Plugin]], [[Filter\|Filter Plugin]] &
-   [[Unsupported\|Unsupported Plugin]] plugins.
-2. The [[Auth\|Auth Plugin]], [[Permissions\|Permissions Plugin]] and
-   [[Store\|Store Plugin]] plugins, for interaction with the `AnnotateIt
+1. The :ref:'tags', :ref:'filter' &
+   :ref:'unsupported' plugins.
+2. The :ref:'auth', :ref:'permissions' and
+   :ref:'store' plugins, for interaction with the `AnnotateIt
    store <http://annotateit.org>`__.
 3. If the `Showdown <https://github.com/coreyti/showdown>`__ library has
    been included on the page the [[Markdown\|Markdown Plugin]] will also
@@ -155,8 +155,7 @@ Here we add the tags plugin to the page:
     });
 
 For more information on available plugins check the navigation to the
-right of this article. Or to create your own check the [[creating a
-plugin section\|Plugin Development]].
+right of this article. Or to create your own check :ref:'plugin-development'.
 
 Saving annotations
 ------------------
@@ -164,4 +163,4 @@ Saving annotations
 In order to keep your annotations around longer than a single page view
 you'll need to set up a store on your server or use an external service
 like `AnnotateIt <http://annotateit.org>`__. For more information on
-storing annotations check out the [[Store Plugin]] on the wiki.
+storing annotations check out the :ref:'store' plugin on the wiki.

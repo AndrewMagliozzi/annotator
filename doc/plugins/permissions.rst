@@ -1,3 +1,4 @@
+.. _permissions:
 ``Permissions`` plugin
 ======================
 

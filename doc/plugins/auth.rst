@@ -1,7 +1,8 @@
+.. _auth:
 ``Auth`` plugin
 ===============
 
-The Auth plugin complements the [[Store Plugin]] by providing
+The Auth plugin complements the :ref:'store' by providing
 authentication for requests. This may be necessary if you are running
 the Store on a separate domain or using a third party service like
 annotateit.org.
