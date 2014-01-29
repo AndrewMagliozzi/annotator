@@ -77,7 +77,7 @@ index
 -  path: ``/annotations``
 -  returns: a list of all annotation objects
 
-Example (see :ref:'annotation-format' for details of the format of
+Example (see :ref:'annotation format' for details of the format of
 individual annotations):
 
 .. code:: json

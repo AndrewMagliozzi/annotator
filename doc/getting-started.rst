@@ -155,7 +155,7 @@ Here we add the tags plugin to the page:
     });
 
 For more information on available plugins check the navigation to the
-right of this article. Or to create your own check :ref:'plugin-development'.
+right of this article. Or to create your own check :ref:'plugin development'.
 
 Saving annotations
 ------------------
